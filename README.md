@@ -16,7 +16,6 @@ All of the infrastructure, building, and testing of DetectionLab is currently fu
 
 [![GitHub Sponsor](https://img.shields.io/badge/GitHub-Sponsor-red.svg)](https://github.com/sponsors/clong)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/paypalme2/clong0)
-[![Donate](https://img.shields.io/badge/Donate-Crypto-blue.svg)](https://commerce.coinbase.com/checkout/838ac7a2-7b9d-4d40-b475-fd1015fdaacd)
 
 ## Purpose
 This lab has been designed with defenders in mind. Its primary purpose is to allow the user to quickly build a Windows domain that comes pre-loaded with security tooling and some best practices when it comes to system logging configurations. It can easily be modified to fit most needs or expanded to include additional hosts.
@@ -33,6 +32,7 @@ NOTE: This lab has not been hardened in any way and runs with default vagrant cr
 * Powershell transcript logging is enabled. All logs are saved to `\\wef\pslogs`
 * osquery comes installed on each host and is pre-configured to connect to a [Fleet](https://kolide.co/fleet) server via TLS. Fleet is preconfigured with the configuration from [Palantir's osquery Configuration](https://github.com/palantir/osquery-configuration)
 * Sysmon is installed and configured using [Olaf Hartong's open-sourced Sysmon configuration](https://github.com/olafhartong/sysmon-modular)
+* Velociraptor is installed on all Windows hosts
 * All autostart items are logged to Windows Event Logs via [AutorunsToWinEventLog](https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog)
 * SMBv1 Auditing is enabled
 
@@ -111,3 +111,4 @@ A sizable percentage of this code was borrowed and adapted from [Stefan Scherer]
 * [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
 * [Hunting for Beacons](http://findingbad.blogspot.com/2020/05/hunting-for-beacons-part-2.html)
 * [BadBlood](https://github.com/davidprowe/BadBlood)
+* [Velociraptor](https://www.velocidex.com/)
